@@ -43,5 +43,16 @@ namespace ProgsFriday.Algorithms
 
             CollectionAssert.AreEqual(expectedArray, array);
         }
+
+        [TestMethod]
+        public void TestQuickSort()
+        {
+            int[] array = new int[] { 5, 4, 3, 2, 1, 11, 23, 11, 12, 22, 3, 1, 2, 3 };
+            int[] expectedArray = array.OrderBy(x => x).ToArray();
+
+            array.QuickSort();
+
+            CollectionAssert.AreEqual(expectedArray, array);
+        }
     }
 }

@@ -18,6 +18,14 @@ namespace ProgsFriday.Lib.Algorithms
 
         }
 
+        public static void QuickSort<T>(this T[] array, IComparer<T> comparer = null)
+        {
+            if (comparer == null)
+                comparer = Comparer<T>.Default;
+
+            _QuickSort(array, 0, array.Length - 1, comparer);
+        }
+
         public static void SelectionSort<T>(this T[] array, IComparer<T> comparer = null)
         {
             if (comparer == null)
@@ -46,7 +54,7 @@ namespace ProgsFriday.Lib.Algorithms
             {
                 T key = array[i];
                 int j = i - 1;
-                
+
                 while (j >= 0 && comparer.Compare(array[j], key) > 0)
                 {
                     array[j + 1] = array[j];
@@ -54,6 +62,33 @@ namespace ProgsFriday.Lib.Algorithms
                 }
                 array[j + 1] = key;
             }
+        }
+
+        private static void _QuickSort<T>(T[] array, int startIndex, int endIndex, IComparer<T> comparer)
+        {
+            if (startIndex >= endIndex)
+                return;
+
+            int middleIndex = Partition(array, startIndex, endIndex, comparer);
+            _QuickSort(array, startIndex, middleIndex - 1, comparer);
+            _QuickSort(array, middleIndex + 1, endIndex, comparer);
+        }
+
+        private static int Partition<T>(T[] array, int startIndex, int endIndex, IComparer<T> comparer)
+        {
+            int middle = startIndex;
+            for (int u = startIndex; u <= endIndex - 1; u++)
+            {
+                if (comparer.Compare(array[u], array[endIndex]) <= 0)
+                {
+                    array.Swap(u, middle);
+                    middle++;
+                }
+            }
+
+            array.Swap(middle, endIndex);
+
+            return middle;
         }
 
         private static void _MergeSort<T>(T[] array, int startIndex, int endIndex, IComparer<T> comparer, T def)
