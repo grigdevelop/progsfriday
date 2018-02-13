@@ -18,6 +18,44 @@ namespace ProgsFriday.Lib.Algorithms
 
         }
 
+        public static void SelectionSort<T>(this T[] array, IComparer<T> comparer = null)
+        {
+            if (comparer == null)
+                comparer = Comparer<T>.Default;
+
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                int smallest = i;
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (comparer.Compare(array[j], array[smallest]) < 0)
+                    {
+                        smallest = j;
+                    }
+                }
+                array.Swap(i, smallest);
+            }
+        }
+
+        public static void InsertionSort<T>(this T[] array, IComparer<T> comparer = null)
+        {
+            if (comparer == null)
+                comparer = Comparer<T>.Default;
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                T key = array[i];
+                int j = i - 1;
+                
+                while (j >= 0 && comparer.Compare(array[j], key) > 0)
+                {
+                    array[j + 1] = array[j];
+                    j--;
+                }
+                array[j + 1] = key;
+            }
+        }
+
         private static void _MergeSort<T>(T[] array, int startIndex, int endIndex, IComparer<T> comparer, T def)
         {
             if (startIndex >= endIndex)
