@@ -1,4 +1,4 @@
-﻿using ProgsFriday.Lib.Comparers;
+﻿using ProgsFriday.Lib;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +19,8 @@ namespace ProgsFriday.Lib.Algorithms
         public static int LinearSearch<T>(this IEnumerable<T> array, T value, IEqualityComparer<T> equalityComparer = null)
         {
             if (equalityComparer == null)
-                equalityComparer = new DefaultEqualityComparer<T>();
+                equalityComparer = EqualityComparer<T>.Default;
+
 
             int foundIndex = -1;
 
@@ -46,7 +47,7 @@ namespace ProgsFriday.Lib.Algorithms
         public static int BetterLinearSearch<T>(this IEnumerable<T> array, T value, IEqualityComparer<T> equalityComparer = null)
         {
             if (equalityComparer == null)
-                equalityComparer = new DefaultEqualityComparer<T>();
+                equalityComparer = EqualityComparer<T>.Default;
 
             int arrayLength = array.Count();
 

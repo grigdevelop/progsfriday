@@ -1,16 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgsFriday.Algorithms", "ProgsFriday.Algorithms\ProgsFriday.Algorithms.csproj", "{8DAEE1DB-466F-4F82-AD9F-5FE05C7C3D03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgsFriday.Algorithms", "ProgsFriday.Algorithms\ProgsFriday.Algorithms.csproj", "{8DAEE1DB-466F-4F82-AD9F-5FE05C7C3D03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgsFriday.Lib", "ProgsFriday.Lib\ProgsFriday.Lib.csproj", "{E515F211-94EC-48C3-908A-10542C19BCA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgsFriday.Lib", "ProgsFriday.Lib\ProgsFriday.Lib.csproj", "{E515F211-94EC-48C3-908A-10542C19BCA5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{E479C802-429D-463F-9828-01429576ABD7}"
-	ProjectSection(SolutionItems) = preProject
-		Documents\Tomas_Kh_Kormen_-_Algoritmy_Vvodny_kurs_-_201.djvu = Documents\Tomas_Kh_Kormen_-_Algoritmy_Vvodny_kurs_-_201.djvu
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgsFriday.Cons", "ProgsFriday.Cons\ProgsFriday.Cons.csproj", "{2DA81BCD-F924-4416-BDC8-6DD49942CC47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +23,10 @@ Global
 		{E515F211-94EC-48C3-908A-10542C19BCA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E515F211-94EC-48C3-908A-10542C19BCA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E515F211-94EC-48C3-908A-10542C19BCA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA81BCD-F924-4416-BDC8-6DD49942CC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA81BCD-F924-4416-BDC8-6DD49942CC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA81BCD-F924-4416-BDC8-6DD49942CC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA81BCD-F924-4416-BDC8-6DD49942CC47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
